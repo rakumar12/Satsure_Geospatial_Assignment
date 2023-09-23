@@ -1,29 +1,3 @@
-# Panoptic Segmentation of Satellite Image Time Series with Convolutional Temporal Attention Networks (ICCV 2021)
-
-![](gfx/predictions.png)
-
-This repository is the official implementation of [Panoptic Segmentation of Satellite Image Time Series with Convolutional Temporal Attention Networks
-](https://arxiv.org/abs/2107.07933). 
-
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/panoptic-segmentation-of-satellite-image-time/semantic-segmentation-on-pastis)](https://paperswithcode.com/sota/semantic-segmentation-on-pastis?p=panoptic-segmentation-of-satellite-image-time)
-
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/panoptic-segmentation-of-satellite-image-time/panoptic-segmentation-on-pastis)](https://paperswithcode.com/sota/panoptic-segmentation-on-pastis?p=panoptic-segmentation-of-satellite-image-time)
-
-## Updates
-
-- **27.06.2022 Major Bugfix** :beetle: A bug in the panoptic metrics was driving the Recognition Quality down artificially. The bug is now fixed and the metrics have been updated here and on Arxiv. Across experiments, solving this bug improved PQ by ~2-3pts on PASTIS. See [this issue](https://github.com/VSainteuf/utae-paps/issues/11) for more details. 
-
-## Contents
-This repository contains the following PyTorch code:
-- [Implementation](https://github.com/VSainteuf/utae-paps/blob/main/src/backbones/utae.py) of **U-TAE** spatio-temporal encoding architecture for satellite image time series
-![UTAE](gfx/utae.png)
-- [Implementation](https://github.com/VSainteuf/utae-paps/blob/main/src/panoptic/paps.py) of **Parcels-as-Points (PaPs)** module for panoptic segmentation of agricultural parcels
-![PaPs](gfx/paps.png)
-- Code for reproduction of the paper's results for panoptic and semantic segmentation.
-
-
-
-
 ## Results
 
 Our model achieves the following performance on :
@@ -35,7 +9,7 @@ When replacing U-TAE with a convolutional LSTM the performance drops to 33.4 PQ.
 
 | Model name         | SQ  | RQ | PQ|
 | ------------------ |--- | --- |--- |
-| **U-TAE + PaPs** (ours)      | **81.5**|**53.2** |**43.8**|
+| **U-TAE** (ours)      | **81.5**|**53.2** |**43.8**|
 | UConvLSTM+PaPs  | 80.2|   43.9   |  35.6|
 
 ### PASTIS - Semantic segmentation
@@ -57,7 +31,6 @@ See the paper for more details.
 The Dataset is freely available for download [here](https://github.com/VSainteuf/pastis-benchmark). 
 
 
-
 ### Python requirements
 To install requirements:
 
@@ -69,13 +42,12 @@ pip install -r requirements.txt
 Installing this library requires a little more effort, see [the official repo](https://github.com/rusty1s/pytorch_scatter))
 
 
-
 ## Inference with pre-trained models
 
 ### Panoptic segmentation
 
 
-Pre-trained weights of U-TAE+Paps are available [here](https://zenodo.org/record/5172301)
+Pre-trained weights of U-TAE+Paps are available [here]([https://zenodo.org/record/5172301](https://drive.google.com/drive/folders/1XQY96g6uoAGLpDUq4qfcsJ6zf4b5H0VN?usp=drive_link))
 
 To perform inference of the pre-trained model on the test set of PASTIS run:
 
@@ -87,7 +59,7 @@ python test_panoptic.py --dataset_folder PATH_TO_DATASET --weight_folder PATH_TO
 ### Semantic segmentation
 
 
-Pre-trained weights of U-TAE are available [here](https://zenodo.org/record/5172293)
+Pre-trained weights of U-TAE are available [here]([https://zenodo.org/record/5172293](https://drive.google.com/drive/folders/1CXeq_Sn7RRHUAOYEUvbzUpQkG5Ubb8NM?usp=drive_link))
 
 To perform inference of the pre-trained model on the test set of PASTIS run:
 
@@ -146,19 +118,6 @@ python train_semantic.py --dataset_folder PATH_TO_DATASET --res_dir OUT_DIR_Sing
 
 ```
 
-### Reference
-
-Please include a citation to the following paper if you use the U-TAE, PaPs or the PASTIS benchmark.
-
-```
-@article{garnot2021panoptic,
-  title={Panoptic Segmentation of Satellite Image Time Series with Convolutional Temporal Attention Networks},
-  author={Sainte Fare Garnot, Vivien  and Landrieu, Loic },
-  journal={ICCV},
-  year={2021}
-}
-
-```
 
 ### Credits
  
