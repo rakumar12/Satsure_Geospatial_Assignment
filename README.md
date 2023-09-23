@@ -47,7 +47,7 @@ Installing this library requires a little more effort, see [the official repo](h
 ### Panoptic segmentation
 
 
-Pre-trained weights of U-TAE+Paps are available [here]([https://zenodo.org/record/5172301](https://drive.google.com/drive/folders/1XQY96g6uoAGLpDUq4qfcsJ6zf4b5H0VN?usp=drive_link))
+Pre-trained weights of U-TAE+Paps are available [here]([weights file ](https://drive.google.com/drive/folders/1XQY96g6uoAGLpDUq4qfcsJ6zf4b5H0VN?usp=drive_link))
 
 To perform inference of the pre-trained model on the test set of PASTIS run:
 
