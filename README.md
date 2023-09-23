@@ -118,10 +118,3 @@ python train_semantic.py --dataset_folder PATH_TO_DATASET --res_dir OUT_DIR_Sing
 
 ```
 
-
-### Credits
- 
-- This work was partly supported by [ASP](https://www.asp-public.fr), the French Payment Agency. 
-
-- Code for the presented methods and dataset is original code by Vivien Sainte Fare Garnot,
- competing methods and some utility functions were adapted from existing repositories which are credited in the corresponding files.
