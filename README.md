@@ -59,7 +59,7 @@ python test_panoptic.py --dataset_folder PATH_TO_DATASET --weight_folder PATH_TO
 ### Semantic segmentation
 
 
-Pre-trained weights of U-TAE are available [here]([https://zenodo.org/record/5172293](https://drive.google.com/drive/folders/1CXeq_Sn7RRHUAOYEUvbzUpQkG5Ubb8NM?usp=drive_link))
+Pre-trained weights of U-TAE are available [here]([Weights file](https://drive.google.com/drive/folders/1CXeq_Sn7RRHUAOYEUvbzUpQkG5Ubb8NM?usp=drive_link))
 
 To perform inference of the pre-trained model on the test set of PASTIS run:
 
